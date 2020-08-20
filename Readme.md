@@ -1,6 +1,8 @@
 # Exact diagonalization using Laczos method
 
-This is the simple example for using cytnx with ED to calculate 1D Transverse field ising model. 
+This is the simple example for using cytnx with ED to calculate 1D Transverse field ising model:
+
+H = -[s]SzSz - (1-[s])Sx 
 
 
 # Cytnx library:
