@@ -17,7 +17,7 @@ for i in A:
     fn = i.strip().split("/")[-1]
     fn = fn.replace(".e.cytn","")
     fn = fn.split("_")
-    param.append(np.array([float(fn[0].split('J')[-1]), float(fn[1].split('Hx')[-1]),float(fn[2].split("L")[-1])]))
+    param.append(np.array([float(fn[0].split('s')[-1]), float(fn[1].split("L")[-1])]))
     tmp = cytnx.Tensor.Load(i)
     Data.append(tmp.numpy())
 

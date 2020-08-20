@@ -30,19 +30,20 @@ class Hising(cy.LinOp):
                 out[oid] += amp*(-self.Hx)*v[a]
         return out
 
-if len(sys.argv) < 4:
-    print("python ed_ising.py <L> <J> <Hx>")
+if len(sys.argv) < 3:
+    print("python ed_ising.py <L> <s>")
     exit(1)
 
 L = int(sys.argv[1])
-J = float(sys.argv[2])
-Hx = float(sys.argv[3])
+s = float(sys.argv[2])
+J = -s
+Hx = -(1.-s)
 H = Hising(L,J,Hx)
 v = cy.ones(int(2**L))
-print("J%3.12f_Hx%3.12f_L%d.e"%(J,Hx,L))
+print("s%3.12f_L%d.e"%(s,L))
 e, _ = cy.linalg.Lanczos_ER(H,3,CvgCrit=1.0e-10,Tin=v)
 
-e.Save("J%3.12f_Hx%3.12f_L%d.e"%(J,Hx,L))
+e.Save("s%3.12f_L%d.e"%(s,L))
 print(e)
 
 

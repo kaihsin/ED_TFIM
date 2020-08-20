@@ -14,10 +14,10 @@ for f in Rp:
 
 
 for i in range(len(Data)):
-    plt.plot(Data[i][:,1],Data[i][:,5]-Data[i][:,3],'o',label="L%d"%(int(Data[i][0,2])))
+    plt.plot(Data[i][:,0],Data[i][:,4]-Data[i][:,2],'o',label="L%d"%(int(Data[i][0,1])))
     
-plt.xlabel("Hx")
-plt.ylim(bottom=0)
+plt.xlabel("s")
+#plt.ylim(bottom=0)
 plt.ylabel(r"$\Delta E_{20}$")
 plt.legend()
 plt.tight_layout()
