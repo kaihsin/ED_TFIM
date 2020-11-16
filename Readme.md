@@ -14,6 +14,13 @@ H = -[s]SzSz - (1-[s])Sx
 
 ![alt text](https://github.com/kaihsin/ED_TFIM/blob/master/Data/Egap.png?raw=true)
 
+# Implementations:
+    * ed_ising.py 
+        This one using the overload of matvec interface directly, memory efficient
+
+    * ed_ising_mve.py
+        This one store all the elements when calling pre-construct, and use openmp to accelerate. performance efficient
+
 
 # Developer:
 
